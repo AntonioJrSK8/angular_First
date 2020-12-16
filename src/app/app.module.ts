@@ -17,6 +17,7 @@ import { FreteNewModalComponent } from './frete/frete-new-modal/frete-new-modal.
 import { FreteEditModalComponent } from './frete/frete-edit-modal/frete-edit-modal.component';
 import { FreteExcluirModalComponent } from './frete/frete-excluir-modal/frete-excluir-modal.component';
 import { QuantEixoDirective } from './quant-eixo.directive';
+import { TesteLineComponent } from './components/teste-line/teste-line.component';
 
 registerLocaleData(localePt);
 
@@ -34,6 +35,7 @@ registerLocaleData(localePt);
     FreteExcluirModalComponent,
     FreteListComponent,
     QuantEixoDirective,
+    TesteLineComponent,
   ],
   imports: [
     BrowserModule,
