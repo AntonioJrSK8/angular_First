@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
     </p>
   `,
   styles: [
+    'p { color: green}',
+    'p { background-color: black}'
   ]
 })
 export class TesteLineComponent implements OnInit {

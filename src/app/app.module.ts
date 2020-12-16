@@ -6,7 +6,7 @@ import { registerLocaleData } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VeiculoListComponent } from "./components/veiculo/veiculo-list/veiculo-list.component";
-import { AlertaSucessoComponent } from './alerta-sucesso/alerta-sucesso.component';
+import { AlertaSucessoComponent } from '../app/components/alerta-sucesso/alerta-sucesso.component';
 import { VeiculoNewModalComponent } from './components/veiculo/veiculo-new-modal/veiculo-new-modal.component';
 import { VeiculoEditModalComponent } from './components/veiculo/veiculo-edit-modal/veiculo-edit-modal.component';
 import { VeiculoExcluirModalComponent } from './components/veiculo/veiculo-excluir-modal/veiculo-excluir-modal.component';

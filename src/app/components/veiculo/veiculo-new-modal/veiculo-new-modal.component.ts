@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Output, EventEmitter } from '@angular/core';
-import { VeiculoService, IVeiculo } from '../../veiculo.service';
+import { VeiculoService, IVeiculo } from '../../../veiculo.service';
 
 declare const $:any;
 

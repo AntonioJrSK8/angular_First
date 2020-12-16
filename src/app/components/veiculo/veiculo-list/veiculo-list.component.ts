@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { VeiculoNewModalComponent } from '../veiculo-new-modal/veiculo-new-modal.component';
-import { VeiculoService, IVeiculo } from '../../veiculo.service';
+import { VeiculoService, IVeiculo } from '../../../veiculo.service';
 import { VeiculoEditModalComponent } from '../veiculo-edit-modal/veiculo-edit-modal.component';
 import { VeiculoExcluirModalComponent } from '../veiculo-excluir-modal/veiculo-excluir-modal.component';
 
