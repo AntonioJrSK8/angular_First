@@ -1,0 +1,41 @@
+<alerta-sucesso [hidden]="!sucesso">
+  Valor do Frete gerado com sucesso!
+</alerta-sucesso>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="newFrete()">Novo</button>
+
+<table class="table table-striped">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Tipo de Carga</th>
+    <th scope="col">Distancia</th>
+    <th scope="col">Numero de Eixo</th>
+    <th scope="col">Valor Mínimo</th>
+    <th scope="col">Ações</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let carga of freteService.carga;let i=index">
+    <th scope="row">{{i+1}}</th>
+    <td>{{carga.tipoCarga | uppercase}}</td>
+    <td>{{carga.distacia}}</td>
+    <td [QuantEixo]="carga.numeroEixo">{{carga.numeroEixo}}</td>
+    <td>{{freteService.getValor(carga) | currency:'BRL':'symbol':'0.0-2':'pt' }}</td>
+    <td>
+      <button
+        type="button"
+        class="btn btn-primary"
+        >Editar</button> |
+      <button
+        type="button"
+        class="btn btn-danger"
+        >Excluir</button>
+  </tr>
+</tbody>
+</table>
+
+<app-frete-new-modal></app-frete-new-modal>

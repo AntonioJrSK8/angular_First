@@ -1,0 +1,43 @@
+<alerta-sucesso [hidden]="!sucesso">
+  Veiculo de placa
+  {{veiculo?.placa}}, gravado com sucesso
+</alerta-sucesso>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="newVeiculo()">Novo</button>
+
+<table class="table table-striped">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Marca</th>
+    <th scope="col">Eixo</th>
+    <th scope="col">Placa</th>
+    <th scope="col">Ações</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let veiculos of veiculoService.veiculos; let i =index">
+    <th scope="row">{{ veiculos.codigo }}</th>
+    <td>{{ veiculos.marca }}</td>
+    <td>{{ veiculos.eixo }}</td>
+    <td>{{ veiculos.placa }}</td>
+    <td>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="editVeiculo(veiculos)">Editar</button> |
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="excluirVeiculo(veiculos)">Excluir</button>
+  </tr>
+</tbody>
+</table>
+
+<veiculo-new-modal
+  (onSubmit)="saveVeiculo($event)"></veiculo-new-modal>
+
+<veiculo-edit-modal></veiculo-edit-modal>
